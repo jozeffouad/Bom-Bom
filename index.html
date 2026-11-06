@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>منيو تشيكن بوم بوم | Chicken Boom Boom</title>
+  <meta name="description" content="المنيو الإلكتروني الرسمي لمطعم تشيكن بوم بوم - بروستد، شاورما، مشويات، وسندوتشات بطعم أحلى وجودة عالية.">
+  <meta name="theme-color" content="#ff5e14">
+
+  <!-- Google Font: Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-notice-bar" aria-label="شريط الإعلانات">
+    <span><i class="fa-solid fa-fire-flame-curved"></i> أكل لذيذ بجودة عالية • طازة دائماً</span>
+    <span><i class="fa-solid fa-clock"></i> توصيل سريع لجميع الأماكن</span>
+  </aside>
+
+  <!-- Hero Header -->
+  <header class="hero-header">
+    <div class="header-container">
+      <div class="logo-wrapper">
+        <img src="images/logo.jpg" alt="شعار تشيكن بوم بوم" class="restaurant-logo">
+        <span class="live-badge">
+          <span class="live-dot"></span>
+          مفتوح الآن
+        </span>
+      </div>
+
+      <div class="restaurant-info">
+        <h1>
+          تشيكن بوم بوم
+          <span class="tag-flame"><i class="fa-solid fa-fire"></i></span>
+        </h1>
+        <p class="tagline">دجاج بوم بوم ... بطعم أحلى وأعلى قرمشة</p>
+        
+        <div class="location-chip">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>شارع الفاتح (أمام البوسطة)</span>
+        </div>
+      </div>
+
+      <!-- Quick Actions In Header -->
+      <div class="header-actions">
+        <button type="button" class="action-btn btn-call" onclick="openModal('callModal')">
+          <i class="fa-solid fa-phone-volume"></i>
+          <span>اتصال هاتفي</span>
+        </button>
+
+        <a href="https://wa.me/201090096267?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%AA%D8%B4%D9%8A%D9%83%D9%86%20%D8%A8%D9%88%D9%85%20%D8%A8%D9%88%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%B7%D9%84%D8%A8%D8%A7%D8%AA" target="_blank" class="action-btn btn-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>محادثة واتساب</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Category Navigation & Search -->
+  <nav class="nav-wrapper" id="stickyNav" aria-label="أقسام المنيو">
+    <div class="nav-container">
+      <!-- Search Input -->
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="menuSearchInput" placeholder="ابحث عن وجبة، ساندوتش، شاورما، أو مشروب...">
+        <button type="button" id="clearSearchBtn" class="clear-search" title="مسح البحث">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="category-pills">
+        <a href="#broasted" class="cat-pill active">
+          <i class="fa-solid fa-drumstick-bite"></i> وجبات البروستد
+        </a>
+        <a href="#shawarma" class="cat-pill">
+          <i class="fa-solid fa-utensils"></i> قسم الشاورما
+        </a>
+        <a href="#arabic-meals" class="cat-pill">
+          <i class="fa-solid fa-box-archive"></i> الوجبات عربي
+        </a>
+        <a href="#shawarma-weight" class="cat-pill">
+          <i class="fa-solid fa-weight-hanging"></i> شاورما بالوزن
+        </a>
+        <a href="#fatta" class="cat-pill">
+          <i class="fa-solid fa-bowl-rice"></i> قسم الفتة
+        </a>
+        <a href="#western" class="cat-pill">
+          <i class="fa-solid fa-burger"></i> الغربي والسندوتشات
+        </a>
+        <a href="#grill" class="cat-pill">
+          <i class="fa-solid fa-fire"></i> الشواية والشيش
+        </a>
+        <a href="#appetizers" class="cat-pill">
+          <i class="fa-solid fa-bowl-food"></i> المقبلات والإضافات
+        </a>
+        <a href="#drinks" class="cat-pill">
+          <i class="fa-solid fa-bottle-droplet"></i> المشروبات المنعشة
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Menu Sections Content -->
+  <main class="menu-main">
+
+    <!-- 1. وجبات البروستد -->
+    <section class="category-section" id="broasted">
+      <div class="category-banner">
+        <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=1200&q=80" alt="وجبات البروستد المقرمشة" loading="lazy">
+        <div class="banner-overlay">
+          <div class="banner-title-wrap">
+            <span class="banner-badge">الأكثر طلباً ⭐</span>
+            <h2 class="banner-category-name">
+              <i class="fa-solid fa-drumstick-bite"></i> وجبات البروستد
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-serving-notice">
+        <i class="fa-solid fa-circle-info"></i>
+        <span>يقدم مع : بطاطس + عيش + تومية + كولسلو</span>
+      </div>
+
+      <div class="items-grid">
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">وجبة ربع دبوس + كلية</div>
+            <div class="item-subtitle">بروستد مقرمش مع البطاطس والإضافات</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">95 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">وجبة ربع صدر + جناح</div>
+            <div class="item-subtitle">بروستد طازج مقرمش ومتبل بعناية</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">110 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">وجبة 4 قطع ( نصف فرخة )</div>
+            <div class="item-subtitle">4 قطع بروستد + بطاطس + عيش + تومية + كولسلو</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">180 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">وجبة 6 قطع ( فرخة إلا ربع )</div>
+            <div class="item-subtitle">6 قطع بروستد كرسبي عائلي</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">280 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">وجبة 8 قطع ( فرخة كاملة )</div>
+            <div class="item-subtitle">فرخة كاملة 8 قطع بروستد شهية</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">360 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">وجبة 12 قطعة ( فرخة ونصف )</div>
+            <div class="item-subtitle">وجبة عائلية فاخرة تكفي حتى 4-5 أفراد</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">540 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">وجبة 16 قطعة ( 2 فرخة كاملة )</div>
+            <div class="item-subtitle">أكبر وجبة بروستد للعزومات واللمة الحلوة</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">610 <span class="currency">ج</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. قسم الشاورما -->
+    <section class="category-section" id="shawarma">
+      <div class="category-banner">
+        <img src="https://images.unsplash.com/photo-1561651823-34feb02250e4?auto=format&fit=crop&w=1200&q=80" alt="قسم الشاورما" loading="lazy">
+        <div class="banner-overlay">
+          <div class="banner-title-wrap">
+            <span class="banner-badge">نكهة سورية أصيلة</span>
+            <h2 class="banner-category-name">
+              <i class="fa-solid fa-utensils"></i> قسم الشاورما
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="items-grid">
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">شاورما كيزر</div>
+            <div class="item-subtitle">شاورما فراخ في خبز كيزر طازج مع التومية والمخلل</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">50 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">شاورما وسط</div>
+            <div class="item-subtitle">ساندوتش شاورما سوري بالحجم الوسط</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">55 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">شاورما كبير</div>
+            <div class="item-subtitle">ساندوتش شاورما سوري كبير مشبع ولذيذ</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">70 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">شاورما فرنساوي</div>
+            <div class="item-subtitle">شاورما بخبز باجيت فرنساوي مميز ومقرمش</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">75 <span class="currency">ج</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. الوجبات عربي -->
+    <section class="category-section" id="arabic-meals">
+      <div class="category-banner">
+        <img src="https://images.unsplash.com/photo-1644783307270-4e3650630664?auto=format&fit=crop&w=1200&q=80" alt="الوجبات عربي شاورما" loading="lazy">
+        <div class="banner-overlay">
+          <div class="banner-title-wrap">
+            <span class="banner-badge">مقطعة وجاهزة للغمس</span>
+            <h2 class="banner-category-name">
+              <i class="fa-solid fa-box-archive"></i> الوجبات عربي
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="items-grid">
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">عربي سنجل</div>
+            <div class="item-subtitle">ساندوتش شاورما مقطع + بطاطس + تومية + مخلل</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">80 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">عربي ميكس</div>
+            <div class="item-subtitle">وجبة عربي ميكس مميزة وغنية بالإضافات</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">110 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">عربي دوبل</div>
+            <div class="item-subtitle">2 ساندوتش مقطع + بطاطس كبيرة + ثومية ومخلل</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">125 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">عربي كاساديا</div>
+            <div class="item-subtitle">شاورما سوري بتتبيلة وجبنة كاساديا مميزة ومحمصة</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">140 <span class="currency">ج</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. شاورما بالوزن -->
+    <section class="category-section" id="shawarma-weight">
+      <div class="category-banner">
+        <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=1200&q=80" alt="شاورما بالوزن" loading="lazy">
+        <div class="banner-overlay">
+          <div class="banner-title-wrap">
+            <span class="banner-badge">بالكيلو والجرام</span>
+            <h2 class="banner-category-name">
+              <i class="fa-solid fa-weight-hanging"></i> شاورما بالوزن
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="items-grid">
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">ربع كيلو شاورما</div>
+            <div class="item-subtitle">250 جرام لحم فراخ شاورما صافي متبل ولذيذ</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">120 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">نصف كيلو شاورما</div>
+            <div class="item-subtitle">500 جرام شاورما فراخ جاهزة للتقديم واللف</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">240 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">1 كيلو شاورما كامل</div>
+            <div class="item-subtitle">1000 جرام شاورما كاملة تكفي العائلة واللمة</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">480 <span class="currency">ج</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. قسم الفتة -->
+    <section class="category-section" id="fatta">
+      <div class="category-banner">
+        <img src="https://images.unsplash.com/photo-1541518763669-27fef04b14ea?auto=format&fit=crop&w=1200&q=80" alt="قسم الفتة السوري" loading="lazy">
+        <div class="banner-overlay">
+          <div class="banner-title-wrap">
+            <span class="banner-badge">أرز بسمتي + عيش محمص + تومية</span>
+            <h2 class="banner-category-name">
+              <i class="fa-solid fa-bowl-rice"></i> قسم الفتة
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="items-grid">
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">فتة صغيرة</div>
+            <div class="item-subtitle">أرز بسمتي أصفر مع قطع الشاورما والعيش المقرمش</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">75 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">فتة وسط</div>
+            <div class="item-subtitle">طبق فتة شاورما وسط غني بالصوصات والبهارات</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">95 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">فتة كبيرة</div>
+            <div class="item-subtitle">طبق فتة شاورما حجم عائلي مشبع حتى الشبع</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">110 <span class="currency">ج</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. الغربي والسندوتشات -->
+    <section class="category-section" id="western">
+      <div class="category-banner">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&q=80" alt="الغربي والسندوتشات" loading="lazy">
+        <div class="banner-overlay">
+          <div class="banner-title-wrap">
+            <span class="banner-badge">برجر وراب وريزو</span>
+            <h2 class="banner-category-name">
+              <i class="fa-solid fa-burger"></i> الغربي والسندوتشات
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-serving-notice">
+        <i class="fa-solid fa-circle-info"></i>
+        <span>يقدم مع : بطاطس + تومية + مخلل + كولسلو</span>
+      </div>
+
+      <div class="items-grid">
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">ساندوتش كرسبي</div>
+            <div class="item-subtitle">قطع فراخ كرسبي مقرمشة بالخبز الطازج مع الصوص</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">65 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">وجبة كرسبي ( 3 قطع )</div>
+            <div class="item-subtitle">3 أصابع كرسبي + بطاطس + تومية + مخلل + كولسلو</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">110 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">وجبة كرسبي ( 5 قطع )</div>
+            <div class="item-subtitle">5 أصابع كرسبي حجم كبير مع كامل الإضافات</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">150 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">وجبة زنجر ( 3 قطع )</div>
+            <div class="item-subtitle">قطع فراخ زنجر سبايسي حارة ومقرمشة مع الإضافات</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">155 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">وجبة زنجر سوبر ( دبل )</div>
+            <div class="item-subtitle">قطع زنجر مقرمشة حارة مضاعفة مع كامل الملحقات</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">155 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">ريزو بوم بوم المميز</div>
+            <div class="item-subtitle">أرز ريزو بالخلطة الخاصة وقطع الفراخ المقرمشة مع صوص الباربكيو</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">75 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">ساندوتش تشيكن بوم</div>
+            <div class="item-subtitle">ساندوتش المحل الأصلي بخلطة بوم بوم المتفجرة</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">95 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">ساندوتش هالابينو بوم</div>
+            <div class="item-subtitle">لعشاق الحار! ساندوتش دجاج كرسبي مع شرائح الهالابينو والصوص الحار</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">120 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">ساندوتش راب بوم بوم</div>
+            <div class="item-subtitle">تورتيلا راب محشو دجاج مقرمش وصوصات بوم بوم اللذيذة</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">120 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">ساندوتش فاهيتا راب</div>
+            <div class="item-subtitle">فاهيتا فراخ متبلة مع الفلفل الألوان والبصل بخبز التورتيلا</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">90 <span class="currency">ج</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. الشواية والشيش -->
+    <section class="category-section" id="grill">
+      <div class="category-banner">
+        <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=1200&q=80" alt="الشواية والشيش على الفحم" loading="lazy">
+        <div class="banner-overlay">
+          <div class="banner-title-wrap">
+            <span class="banner-badge">ريحة الفحم والشواية</span>
+            <h2 class="banner-category-name">
+              <i class="fa-solid fa-fire"></i> الشواية والشيش
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-serving-notice">
+        <i class="fa-solid fa-circle-info"></i>
+        <span>فراخ شواية غاز أو شيش فحم (يقدم مع : عيش + بطاطس + تومية + مخلل)</span>
+      </div>
+
+      <div class="items-grid">
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">1/4 ورك</div>
+            <div class="item-subtitle">ربع ورك فراخ مشوي طري مع العيش والبطاطس والتومية</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">90 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">1/4 صدر</div>
+            <div class="item-subtitle">ربع صدر مشوي صحي ومتبل بالتتبيلة السرية</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">105 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">ربع شيش</div>
+            <div class="item-subtitle">شيش طاووق فراخ مشوي على الفحم مع الصوصات والعيش</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">110 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">وجبة ورك دبل</div>
+            <div class="item-subtitle">2 ورك فراخ مشوي مع وجبة كاملة من البطاطس والعيش</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">160 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">نصف فرخة كاملة</div>
+            <div class="item-subtitle">نصف دجاجة مشوية على الفحم أو الشواية حسب الطلب</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">180 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">نصف شيش</div>
+            <div class="item-subtitle">نصف كيلو شيش طاووق فراخ متبل ومشوي على الفحم</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">180 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">فرخة كاملة</div>
+            <div class="item-subtitle">فرخة كاملة مشوية تكفي العائلة مع العيش والبطاطس والتومية والمخلل</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">350 <span class="currency">ج</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. المقبلات والإضافات -->
+    <section class="category-section" id="appetizers">
+      <div class="category-banner">
+        <img src="https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=1200&q=80" alt="المقبلات والإضافات" loading="lazy">
+        <div class="banner-overlay">
+          <div class="banner-title-wrap">
+            <span class="banner-badge">لتكتمل متعة الأكل</span>
+            <h2 class="banner-category-name">
+              <i class="fa-solid fa-bowl-food"></i> المقبلات والإضافات
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="items-grid">
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">عيش سوري</div>
+            <div class="item-subtitle">رغيف خبز سوري طازج وساخن</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">5 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">رز بسمتي صغير</div>
+            <div class="item-subtitle">طبق أرز بسمتي فاخر ومبهر</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">30 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">رز بسمتي كبير</div>
+            <div class="item-subtitle">طبق أرز بسمتي حجم كبير عائلي</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">40 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">سلطة كولسلو كبيرة</div>
+            <div class="item-subtitle">سلطة كرنب وجزر غنية بالمايونيز اللذيذ</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">20 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">سلطة خضراء صغيرة</div>
+            <div class="item-subtitle">خضروات طازجة متنوعة ومتبلة بالليمون والزيت</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">10 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">تومية صغيرة</div>
+            <div class="item-subtitle">تومية سورية كريمية أصلية</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">10 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">تومية كبيرة</div>
+            <div class="item-subtitle">علبة تومية كبيرة تكفي جميع الأصناف</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">15 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">مخلل مشكل</div>
+            <div class="item-subtitle">مخلل مشكل بلدي مقرمش وحامض</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">10 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">بطاطس صغيرة</div>
+            <div class="item-subtitle">باكيت بطاطس محمرة مقرمشة وذهبية</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">15 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">بطاطس كبيرة</div>
+            <div class="item-subtitle">باكيت بطاطس حجم عائلي مقرمشة وساخنة</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">25 <span class="currency">ج</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. المشروبات المنعشة -->
+    <section class="category-section" id="drinks">
+      <div class="category-banner">
+        <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=1200&q=80" alt="المشروبات المنعشة والمياه" loading="lazy">
+        <div class="banner-overlay">
+          <div class="banner-title-wrap">
+            <span class="banner-badge">باردة ومنعشة</span>
+            <h2 class="banner-category-name">
+              <i class="fa-solid fa-bottle-droplet"></i> المشروبات المنعشة
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="items-grid">
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">مياه معدنية صغيرة</div>
+            <div class="item-subtitle">زجاجة مياه معدنية نقية باردة</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">10 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">مياه معدنية كبيرة</div>
+            <div class="item-subtitle">زجاجة مياه معدنية عائلية باردة</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">15 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">عصائر طبيعية متنوعة</div>
+            <div class="item-subtitle">عصائر فريش متنوعة ولذيذة</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">10 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">كانز كولا / سبرايت</div>
+            <div class="item-subtitle">مشروب غازي مثلج كانز متنوع</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">20 <span class="currency">ج</span></span>
+          </div>
+        </div>
+
+        <div class="menu-item-card">
+          <div class="item-details">
+            <div class="item-name">لتر كولا</div>
+            <div class="item-subtitle">زجاجة لتر كولا عائلية باردة ومنعشة</div>
+          </div>
+          <div class="item-pricing-action">
+            <span class="item-price">35 <span class="currency">ج</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Empty search message -->
+    <div id="noResultsMsg" class="no-results">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <p>لم يتم العثور على وجبات مطابقة لبحثك.</p>
+    </div>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h3>تشيكن بوم بوم</h3>
+        <p style="margin-bottom: 12px; font-size: 0.95rem;">
+          مطعم دجاج بوم بوم - نضمن لك أشهى مذاق للبروستد والشاورما والمشويات بأعلى معايير الجودة والنظافة.
+        </p>
+        <p style="color: #ffb703; font-weight: 700; font-size: 0.9rem;">
+          <i class="fa-solid fa-heart"></i> طازة دائماً وبطعم أحلى
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3>أرقام الدليفري والتوصيل</h3>
+        <ul class="phone-list">
+          <li>
+            <a href="tel:01090096267" class="phone-link">
+              <span>01090096267</span>
+              <i class="fa-solid fa-phone" style="color: #38bdf8;"></i>
+            </a>
+          </li>
+          <li>
+            <a href="tel:01044415503" class="phone-link">
+              <span>01044415503</span>
+              <i class="fa-solid fa-phone" style="color: #38bdf8;"></i>
+            </a>
+          </li>
+          <li>
+            <a href="tel:01060492611" class="phone-link">
+              <span>01060492611</span>
+              <i class="fa-solid fa-phone" style="color: #38bdf8;"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>العنوان وساعات العمل</h3>
+        <div class="footer-address">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <strong>شارع الفاتح (أمام البوسطة)</strong>
+            <p style="font-size: 0.85rem; margin-top: 4px;">خدمة التوصيل السريع متاحة طوال اليوم حتى ساعات متأخرة من الليل.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom-credit">
+      جميع الحقوق محفوظة &copy; تشيكن بوم بوم - المنيو الإلكتروني
+    </div>
+  </footer>
+
+  <!-- Floating Mobile Bottom Action Bar -->
+  <div class="bottom-floating-bar" aria-label="أزرار التفاعل السريع">
+    <button type="button" class="nav-float-btn btn-call-float" onclick="openModal('callModal')">
+      <i class="fa-solid fa-phone"></i>
+      <span>اتصال</span>
+    </button>
+    <a href="https://wa.me/201090096267?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%AA%D8%B4%D9%8A%D9%83%D9%86%20%D8%A8%D9%88%D9%85%20%D8%A8%D9%88%D9%85" target="_blank" class="nav-float-btn btn-wa-float">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>واتساب</span>
+    </a>
+  </div>
+
+  <!-- Modal 1: Call Phone Numbers -->
+  <div class="modal-overlay" id="callModal" role="dialog" aria-modal="true" aria-labelledby="callModalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="callModalTitle"><i class="fa-solid fa-phone-volume" style="color: #0284c7;"></i> اختر رقم للاتصال المباشر</h3>
+        <button type="button" class="modal-close-btn" onclick="closeModal('callModal')" aria-label="إغلاق">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 16px;">
+          أرقام خدمة الدليفري والاستفسار لمطعم تشيكن بوم بوم:
+        </p>
+        <div class="call-numbers-list">
+          <div class="call-card">
+            <span class="call-number-text">01090096267</span>
+            <div class="call-btn-group">
+              <a href="tel:01090096267" class="mini-btn phone-btn" title="اتصال هاتفي"><i class="fa-solid fa-phone"></i></a>
+              <a href="https://wa.me/201090096267" target="_blank" class="mini-btn wa-btn" title="محادثة واتساب"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+          </div>
+
+          <div class="call-card">
+            <span class="call-number-text">01044415503</span>
+            <div class="call-btn-group">
+              <a href="tel:01044415503" class="mini-btn phone-btn" title="اتصال هاتفي"><i class="fa-solid fa-phone"></i></a>
+              <a href="https://wa.me/201044415503" target="_blank" class="mini-btn wa-btn" title="محادثة واتساب"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+          </div>
+
+          <div class="call-card">
+            <span class="call-number-text">01060492611</span>
+            <div class="call-btn-group">
+              <a href="tel:01060492611" class="mini-btn phone-btn" title="اتصال هاتفي"><i class="fa-solid fa-phone"></i></a>
+              <a href="https://wa.me/201060492611" target="_blank" class="mini-btn wa-btn" title="محادثة واتساب"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Application Logic -->
+  <script src="js/app.js"></script>
+</body>
+</html>
+
