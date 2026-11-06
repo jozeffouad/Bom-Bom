@@ -176,55 +176,6 @@ body {
   color: var(--primary);
 }
 
-/* Header Action Buttons */
-.header-actions {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 6px;
-  width: 100%;
-  max-width: 600px;
-}
-
-.action-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 10px 18px;
-  border-radius: 12px;
-  font-weight: 700;
-  font-size: 0.95rem;
-  text-decoration: none;
-  cursor: pointer;
-  border: none;
-  transition: var(--transition);
-  flex: 1 1 160px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
-}
-
-.action-btn.btn-call {
-  background: linear-gradient(135deg, #0284c7, #0369a1);
-  color: #fff;
-}
-
-.action-btn.btn-call:hover {
-  background: linear-gradient(135deg, #0369a1, #075985);
-  transform: translateY(-2px);
-}
-
-.action-btn.btn-whatsapp {
-  background: linear-gradient(135deg, #25d366, #128c7e);
-  color: #fff;
-}
-
-.action-btn.btn-whatsapp:hover {
-  background: linear-gradient(135deg, #20ba5a, #0d7065);
-  transform: translateY(-2px);
-}
-
-
 /* ================= Sticky Category Nav & Search ================= */
 .nav-wrapper {
   position: sticky;
@@ -830,14 +781,6 @@ body {
 }
 
 @media (max-width: 480px) {
-  .header-actions {
-    flex-direction: column;
-  }
-  
-  .action-btn {
-    width: 100%;
-  }
-
   .category-banner {
     height: 170px;
   }
@@ -856,4 +799,3 @@ body {
     padding: 12px;
   }
 }
-
